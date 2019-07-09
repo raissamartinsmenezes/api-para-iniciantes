@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/img/background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  /* opacity: 0.5; */
+  /* resolver problema com a opacidade */
+}
+
+h1, h2, h3 {
+  font-family: 'Caveat Brush', cursive;
+}
+
+.span-asterisk {
+  font-family: 'Caveat Brush', cursive;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+p .p-light {
+  font-weight: 300;
+}
+
+p .p-italic {
+  font-style: italic;
+}
+
+.p-mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+  /* position: absolute;
+    z-index: 99; */
+}
+/*# sourceMappingURL=style.css.map */
