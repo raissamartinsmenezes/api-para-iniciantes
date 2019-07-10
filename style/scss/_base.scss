@@ -1,96 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(../assets/img/background.jpg);
-    background-repeat: repeat-y;
-    background-size: cover;
-    font-size: 100%;
-    /* opacity: 0.5; */
-    /* resolver problema com a opacidade */
+  background-image: url(../assets/img/background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  font-size: 100%;
+  /* opacity: 0.5; */
+  /* resolver problema com a opacidade */
 }
 
-h1, h2, h3 {
-    font-family: 'Caveat Brush', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Caveat Brush", cursive;
 }
 
 h1 {
-    font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-    font-size: 2.5rem;
-    text-align: left;
+  font-size: 2.5rem;
+  text-align: left;
 }
 
 h3 {
-    font-size: 1.8rem;
-    text-align: left;
+  font-size: 1.8rem;
+  text-align: left;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
 
-    &:hover {
-        color: $lilac-darken;
-    }
+  &:hover {
+    color: $lilac-darken;
+  }
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.0rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+.p-robo-light {
+  font-weight: 300;
+}
 
-    .p-robo-light {
-        font-weight: 300;
-    }
+.p-robo-italic {
+  font-style: italic;
+}
 
-    .p-robo-italic {
-        font-style: italic;
-    }
+.p-robo-bold {
+  font-weight: 700;
+}
 
-    .p-robo-bold {
-        font-weight: 700;
-    }
+.p-mono {
+  font-family: "Roboto Mono", monospace;
 
-    .p-mono {
-        font-family: 'Roboto Mono', monospace;
-    
-        .p-mono-bold {
-            font-weight: 700;
-        }
-    }
-
+  .p-mono-bold {
+    font-weight: 700;
+  }
 }
 
 .p-small {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .span-asterisk {
-    font-family: 'Caveat Brush', cursive;
-    font-size: 2.5rem;
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.5rem;
 }
 
+strong {
+    background-color: $lilac-lighten;
+}
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    // text-align: center;
-    text-decoration-style: none;
-    /* position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  // text-align: center;
+  text-decoration-style: none;
+  /* position: absolute;
     z-index: 99; */
 }
-
-

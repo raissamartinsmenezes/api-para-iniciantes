@@ -1,0 +1,95 @@
+// Set of cards
+.setOfCards {
+	height: 42mm;
+	width: 31mm;
+	position: relative;
+}
+
+// Card
+.card {
+	height: inherit;
+	width: inherit;
+	background: #fff;
+	box-shadow: 0 0 6px 0 rgba(158, 158, 158, 0.3);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 25% bottom;
+	transition: transform .2s;
+}
+
+// Hover animation
+@for $i from 1 through 5 {
+	.setOfCards:hover .card:nth-child(#{$i}) {
+		transform: rotate($i*10-25deg); // Rotate each card 10% more than the previous
+	}
+	.setOfCards .card:hover:nth-child(#{$i}) {
+		transform: rotate($i*10-25deg) translateY(-20px); // Picked card animation
+	}
+}
+
+// Card colors
+.card[data-card-color="club"],
+.card[data-card-color="spade"] {
+	color: black;
+}
+
+.card[data-card-color="heart"],
+.card[data-card-color="diamond"] {
+	color: red;
+}
+
+// Card index
+.card::before,
+.card::after {
+	content: "";
+	position: absolute;
+	font-size: 1.0em;
+	line-height: .8;
+	text-align: center;
+	white-space: pre;
+}
+
+.card::before {
+	top: 15px;
+	left: 15px;
+}
+
+.card::after {
+	bottom: 15px;
+	right: 15px;
+	transform: scaleY(-1); // Vertical flip
+}
+
+.card[data-card-color="club"]::before,
+.card[data-card-color="club"]::after {
+	content: attr(data-card-index)"\a♣"; // data-card-index + card-color symbol
+}
+
+.card[data-card-color="spade"]::before,
+.card[data-card-color="spade"]::after {
+	content: attr(data-card-index)"\a♠";
+}
+
+.card[data-card-color="heart"]::before,
+.card[data-card-color="heart"]::after {
+	content: attr(data-card-index)"\a♥";
+}
+
+.card[data-card-color="diamond"]::before,
+.card[data-card-color="diamond"]::after {
+	content: attr(data-card-index)"\a♦";
+}
+
+// Card pips
+.card-pip {
+	text-align: center;
+	font-size: 1.6em;
+	line-height: .75;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+

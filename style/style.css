@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 * {
   margin: 0;
@@ -15,8 +16,10 @@ body {
   /* resolver problema com a opacidade */
 }
 
-h1, h2, h3 {
-  font-family: 'Caveat Brush', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Caveat Brush", cursive;
 }
 
 h1 {
@@ -49,27 +52,27 @@ li {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.0rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
-p .p-robo-light {
+.p-robo-light {
   font-weight: 300;
 }
 
-p .p-robo-italic {
+.p-robo-italic {
   font-style: italic;
 }
 
-p .p-robo-bold {
+.p-robo-bold {
   font-weight: 700;
 }
 
-p .p-mono {
-  font-family: 'Roboto Mono', monospace;
+.p-mono {
+  font-family: "Roboto Mono", monospace;
 }
 
-p .p-mono .p-mono-bold {
+.p-mono .p-mono-bold {
   font-weight: 700;
 }
 
@@ -78,8 +81,12 @@ p .p-mono .p-mono-bold {
 }
 
 .span-asterisk {
-  font-family: 'Caveat Brush', cursive;
+  font-family: "Caveat Brush", cursive;
   font-size: 2.5rem;
+}
+
+strong {
+  background-color: #ECDAFF;
 }
 
 .container {
@@ -141,5 +148,171 @@ p .p-mono .p-mono-bold {
 
 .nav .nav-active li {
   background-color: #ECDAFF;
+}
+
+.setOfCards {
+  height: 42mm;
+  width: 31mm;
+  position: relative;
+}
+
+.card {
+  height: inherit;
+  width: inherit;
+  background: #fff;
+  -webkit-box-shadow: 0 0 6px 0 rgba(158, 158, 158, 0.3);
+          box-shadow: 0 0 6px 0 rgba(158, 158, 158, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 25% bottom;
+          transform-origin: 25% bottom;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.setOfCards:hover .card:nth-child(1) {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.setOfCards .card:hover:nth-child(1) {
+  -webkit-transform: rotate(-15deg) translateY(-20px);
+          transform: rotate(-15deg) translateY(-20px);
+}
+
+.setOfCards:hover .card:nth-child(2) {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.setOfCards .card:hover:nth-child(2) {
+  -webkit-transform: rotate(-5deg) translateY(-20px);
+          transform: rotate(-5deg) translateY(-20px);
+}
+
+.setOfCards:hover .card:nth-child(3) {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.setOfCards .card:hover:nth-child(3) {
+  -webkit-transform: rotate(5deg) translateY(-20px);
+          transform: rotate(5deg) translateY(-20px);
+}
+
+.setOfCards:hover .card:nth-child(4) {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.setOfCards .card:hover:nth-child(4) {
+  -webkit-transform: rotate(15deg) translateY(-20px);
+          transform: rotate(15deg) translateY(-20px);
+}
+
+.setOfCards:hover .card:nth-child(5) {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.setOfCards .card:hover:nth-child(5) {
+  -webkit-transform: rotate(25deg) translateY(-20px);
+          transform: rotate(25deg) translateY(-20px);
+}
+
+.card[data-card-color="club"],
+.card[data-card-color="spade"] {
+  color: black;
+}
+
+.card[data-card-color="heart"],
+.card[data-card-color="diamond"] {
+  color: red;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  font-size: 1.0em;
+  line-height: .8;
+  text-align: center;
+  white-space: pre;
+}
+
+.card::before {
+  top: 15px;
+  left: 15px;
+}
+
+.card::after {
+  bottom: 15px;
+  right: 15px;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.card[data-card-color="club"]::before,
+.card[data-card-color="club"]::after {
+  content: attr(data-card-index) "\a♣";
+}
+
+.card[data-card-color="spade"]::before,
+.card[data-card-color="spade"]::after {
+  content: attr(data-card-index) "\a♠";
+}
+
+.card[data-card-color="heart"]::before,
+.card[data-card-color="heart"]::after {
+  content: attr(data-card-index) "\a♥";
+}
+
+.card[data-card-color="diamond"]::before,
+.card[data-card-color="diamond"]::after {
+  content: attr(data-card-index) "\a♦";
+}
+
+.card-pip {
+  text-align: center;
+  font-size: 1.6em;
+  line-height: .75;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.yellow-box {
+  width: 50vw;
+  margin: 0 auto;
+  background-color: #FFF3B5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.yellow-box p {
+  font-size: 0.85rem;
+  padding: 0 4%;
+}
+
+.black-box {
+  width: 35vw;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: black;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
 }
 /*# sourceMappingURL=style.css.map */
