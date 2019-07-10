@@ -10,6 +10,7 @@ body {
   background-image: url(../assets/img/background.jpg);
   background-repeat: repeat-y;
   background-size: cover;
+  font-size: 100%;
   /* opacity: 0.5; */
   /* resolver problema com a opacidade */
 }
@@ -18,33 +19,127 @@ h1, h2, h3 {
   font-family: 'Caveat Brush', cursive;
 }
 
-.span-asterisk {
-  font-family: 'Caveat Brush', cursive;
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #AC7FDB;
+}
+
+li {
+  list-style: none;
 }
 
 p {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.0rem;
 }
 
-p .p-light {
+p .p-robo-light {
   font-weight: 300;
 }
 
-p .p-italic {
+p .p-robo-italic {
   font-style: italic;
 }
 
-.p-mono {
+p .p-robo-bold {
+  font-weight: 700;
+}
+
+p .p-mono {
   font-family: 'Roboto Mono', monospace;
+}
+
+p .p-mono .p-mono-bold {
+  font-weight: 700;
+}
+
+.p-small {
+  font-size: 0.9rem;
+}
+
+.span-asterisk {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 2.5rem;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
-  text-align: center;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
   /* position: absolute;
     z-index: 99; */
+}
+
+.nav-section {
+  text-align: center;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.nav li {
+  font-family: 'Caveat Brush', cursive;
+}
+
+.nav .line-through {
+  text-decoration: line-through;
+}
+
+.nav ul {
+  font-family: 'Caveat Brush', cursive;
+  cursor: pointer;
+}
+
+.nav ul span:hover {
+  font-weight: bold;
+}
+
+.nav ul li {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  padding: 4% 2%;
+}
+
+.nav .nav-active {
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+
+.nav .nav-active li {
+  background-color: #ECDAFF;
 }
 /*# sourceMappingURL=style.css.map */

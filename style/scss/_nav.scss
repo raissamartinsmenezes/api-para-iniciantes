@@ -1,0 +1,57 @@
+.nav-section {
+    text-align: center;
+}
+
+.nav {
+    width: 80%;
+    margin: 0 auto;
+    @include flex(flex-start, space-between); 
+    font-size: 1.5rem;
+
+    li {
+        font-family: 'Caveat Brush', cursive;
+    }
+        
+    .line-through {
+        text-decoration: line-through;
+        // word-wrap: break-word;
+    }
+
+    ul {
+        font-family: 'Caveat Brush', cursive;
+        cursor: pointer;
+    
+        span {
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+
+        li {
+            // display: none;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            padding: 4% 2%;
+        }
+      
+    }
+
+    .nav-active {
+        display: none;
+        position: absolute;
+        z-index: 999;
+
+        li {
+            background-color: $lilac-lighten;    
+        }
+    }
+    
+}
+
+// quando o menu for ativado no javascript
+// .menu-disable {
+//     li {
+//         font-family: 'Roboto Mono', monospace;
+//     }
+// }

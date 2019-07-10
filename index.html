@@ -13,41 +13,57 @@
 <body>
     <div class="container">
         <!-- Menu -->
-        <section>
+        <section class="nav-section">
             <h1>API para iniciantes</h1>
-            <p><span class="span-asterisk">*</span>Este projeto é uma tradução livre do livro <span class="p-italic">An introduction to APIs</span> escrito por Bryan Landers, disponível gratuitamente em: <a href="https://zapier.com/learn/apis/">Zapier.com</a></p>
-            <p>Qualquer conteúdo não referente ao livro em questão, está devidamente creditado.</p>
-            <nav>
-                <ul>
-                    <li>Conteúdo:</li>
-                    <li>Introdução</li>
-                    <li>Protocolos</li>
-                    <li>Formato de dados</li>
-                    <li>Autenticação - Parte 1</li>
+            <p><span class="span-asterisk">*</span>Este projeto é uma tradução livre do livro <span class="p-robo-italic">An introduction to APIs</span> escrito por Bryan Landers, disponível gratuitamente em: <a href="https://zapier.com/learn/apis/">zapier.com</a></p>
+            <p class="p-small">Qualquer conteúdo não referente ao livro em questão, está devidamente creditado.</p>
+            <div class="nav">
+                <li>Conteúdo:</li>
+                <!-- class="menu-disable" -->
+                <ul><span>Introdução</span>
+                    <div class="drop-down nav-active">
+                        <li><a href="#intro1">˂O que é uma API?/˃</a></li>
+                        <li><a href="#intro2">˂Como uma API é usada?/˃</a></li>
+                        <li><a href="#intro3">˂Quizz/˃</a></li>
+                    </div>
                 </ul>
-            </nav>
+                <!-- class="menu-disable" -->
+                <ul><span>Protocolo</span>
+                    <div class="drop-down nav-active">
+                        <li><a href="#proto1">˂O protocolo da Web/˃</a></li>
+                        <li><a href="#proto2">˂Solicitações HTTP/˃</a></li>
+                        <li><a href="#proto3">˂Respostas HTTP/˃</a></li>
+                        <li><a href="#proto4">˂Como APIs são construídas com HTTP/˃</a></li>
+                        <li><a href="#proto5">˂Pedindo sua pizza/˃</a></li>
+                    </div>
+                </ul>
+                <li class="line-through">Formato de dados</li>
+                <li class="line-through">Autenticação (Parte 1)</li>
+            </div> 
         </section>
 
         <!-- menu que será ativado quando passar o mouse -->
-        <ul>
-            <li>O que é uma API?</li>
-            <li>Como uma API é usada?</li>
-            <li>Quizz</li>
-        </ul>
-        <ul>
-            <li>O protocolo da Web</li>
-            <li>Solicitações HTTP</li>
-            <li>Respostas HTTP</li>
-            <li>Como APIs são construídas com HTTP</li>
-            <li>Pedindo sua pizza</li>
-        </ul>
+        <!-- <ul class="menu-active">
+            <li>˂O que é uma API?/˃</li>
+            <li>˂Como uma API é usada?/˃</li>
+            <li>˂Quizz/˃</li>
+        </ul> -->
+        <!-- <ul class="menu-active">
+            <li>˂O protocolo da Web/˃</li>
+            <li>˂Solicitações HTTP/˃</li>
+            <li>˂Respostas HTTP/˃</li>
+            <li>˂Como APIs são construídas com HTTP/˃</li>
+            <li>˂Pedindo sua pizza/˃</li>
+        </ul> -->
 
         <!-- Introdução -->
-
-        <!-- O que é uma API? -->
-        <section>
+        <section class="intro-section">
             <h2><span>*</span>Introdução</h2>
-            <p></p>
+            <p>Para nos ancorar, vamos começar com algo que é físico: o servidor (the server).
+                Um servidor nada mais é do que um grande computador, tem todas as mesmas 
+                partes que um laptop t desktop que você usa para o trabalho, é apenas mais 
+                rápido e mais poderoso. Normalmente, os servidores não têm um monitor, teclado 
+                ou mouse, o que os torna inacessíveis.</p>
             <div>
                 <img>
                 <span>x</span>
@@ -56,7 +72,7 @@
             <div>
                 <p></p>
                 <div>
-
+        
                 </div>
             </div>
         </section>
@@ -164,6 +180,7 @@
         
     </footer>
     
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="js/script.js"></script>
 </body>
 
