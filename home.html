@@ -121,6 +121,7 @@
                 <div><input type="radio" name="quizz" value="c"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
                 <button id="submit">Próxima</button>
                 <div id="results"></div>
+            </form>
             </div>
         </section>
 
@@ -194,22 +195,28 @@
                 4 Envie uma solicitação DELETE sem nenhum dado do corpo.</p></div>
                 <div class="black-box">
                     <form>
-                        <legend>URL: http://blablablabla</legend>
-                        <div>
-                            <legend>Método:</legend>
-                            <input>
+                        <label>URL: http://exemplo.com</label>
+                        <div class="div-style">
+                            <label>Método:</label>
+                            <select name="metodos" id="escolheMetodo">
+                                <option value="get">GET</option>
+                                <option value="post">POST</option>
+                                <option value="put">PUT</option>
+                                <option value="delete">DELETE</option>
+                            </select>
                         </div>
-                        <div>
-                            <legend>Corpo:</legend>
-                            <input>
+                        <div class="div-style div-flex-column">
+                            <label>Corpo:</label>
+                            <textarea id="inputCorpo"></textarea>
                         </div>
-                        <button type="submit">Envie sua solicitação</button>
-                        <div>
-                            <legend>Resposta:</legend>
-                            <input>
+                        <button type="submit" id="buttonResposta">Envie sua solicitação</button>
+                        <div class="div-style">
+                            <label>Resposta:</label>
+                            <div class="yellow-answer" id="resultadoMetodo">
+
+                            </div>
                         </div>
                     </form>
-                
                 </div>
             </div>
         </section>

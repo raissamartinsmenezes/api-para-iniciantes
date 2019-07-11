@@ -94,6 +94,7 @@ p {
 
 strong {
   background-color: #ECDAFF;
+  border: 2px solid #ECDAFF;
 }
 
 .yellow-bold {
@@ -338,7 +339,8 @@ label {
   border: none;
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
-  margin-top: 4%;
+  cursor: pointer;
+  margin: 4% auto;
 }
 
 .black-box .option-black-box {
@@ -353,8 +355,36 @@ label {
   margin-left: 1%;
 }
 
+.black-box .yellow-answer {
+  width: 80%;
+  height: auto;
+  margin-left: 2%;
+  background-color: #FFF3B5;
+  color: black;
+  font-family: "Roboto Mono", monospace;
+  padding: 4%;
+}
+
 form {
   padding: 5%;
+}
+
+.div-style {
+  margin-top: 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.div-style textarea {
+  width: 60%;
+  height: 7vh;
+}
+
+.div-style select, .div-style textarea {
+  margin-left: 2%;
 }
 
 a.tooltip {

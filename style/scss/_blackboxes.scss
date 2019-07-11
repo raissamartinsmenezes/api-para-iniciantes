@@ -9,7 +9,7 @@
 
     button {
         @include button($lilac-lighten);
-        margin-top: 4%;
+        margin: 4% auto;
     }
 
     .option-black-box {
@@ -24,10 +24,37 @@
         }
     }
 
+    .yellow-answer {
+        width: 80%;
+        height: auto;
+        margin-left: 2%;
+        background-color: $yellow-lighten;
+        color: black;
+        font-family: "Roboto Mono", monospace; 
+        // font-size: $box-font;
+        padding: 4%;
+    }
+    
+
 }
 
 form {
-    padding: 5%;
+    padding: 5%;   
+}
+
+.div-style {
+    margin-top: 2.5%;
+    display: flex;
+    align-content: flex-end;
+
+    textarea {
+        width: 60%;
+        height: 7vh;
+    }
+
+    select, textarea {
+        margin-left: 2%;
+    }
 }
 
 // .option-black-box {
