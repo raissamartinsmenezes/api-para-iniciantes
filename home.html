@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API para iniciantes</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- adicionar favicon -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAV -->
+        <section class="nav-section">
+            <h1>API para iniciantes</h1>
+            <p><span class="span-asterisk">*</span>Este projeto é uma tradução livre do livro <span class="p-robo-italic">An introduction to APIs</span> escrito por Bryan Landers, disponível gratuitamente em: <a href="https://zapier.com/learn/apis/">zapier.com</a></p>
+            <p class="p-small">Qualquer conteúdo não referente ao livro em questão, está devidamente creditado.</p>
+            <div class="nav">
+                <li>Conteúdo:</li>
+                <ul><span>Introdução</span>
+                    <div class="drop-down nav-active">
+                        <li><a href="#intro1">˂O que é uma API?/˃</a></li>
+                        <li><a href="#intro2">˂Como uma API é usada?/˃</a></li>
+                        <li><a href="#intro3">˂Quizz/˃</a></li>
+                    </div>
+                </ul>
+                <ul><span>Protocolo</span>
+                    <div class="drop-down nav-active">
+                        <li><a href="#proto1">˂O protocolo da Web/˃</a></li>
+                        <li><a href="#proto2">˂Solicitações HTTP/˃</a></li>
+                        <li><a href="#proto3">˂Respostas HTTP/˃</a></li>
+                        <li><a href="#proto4">˂Como APIs são construídas com HTTP/˃</a></li>
+                        <li><a href="#proto5">˂Pedindo sua pizza/˃</a></li>
+                    </div>
+                </ul>
+                <li class="line-through">Formato de dados</li>
+                <li class="line-through">Autenticação (Parte 1)</li>
+            </div> 
+        </section>
+
+        <!-- Introdução -->
+        <section class="intro-section">
+            <h2><span>*</span>Introdução</h2>
+            <p>Para nos ancorar, vamos começar com algo que é físico: o <a href="#" class="tooltip" data-tooltip="A realidade é que as pessoas de TI se conectam remotamente a eles. Servidores são usados para todos os tipos de coisas. Alguns armazenam dados, outros enviam emails. O tipo que as pessoas mais interagem são os servidores da web (web servers). Estes são os servidores que fornecem uma página da web quando você visita um site."><strong>servidor (the server)</strong></a>. Um servidor nada mais é do que um grande computador, tem todas as mesmas partes que um laptop desktop que você usa para o trabalho, é apenas mais rápido e mais poderoso. Normalmente, os servidores não têm um monitor, teclado ou mouse, o que os torna inacessíveis.</p>
+            <div>
+                <img>
+                <span>x</span>
+                <img>
+            </div>
+            <div class="yellow-box">
+                <p class="p-mono">Da mesma forma que um programa
+                    como a Paciência espera por você
+                    clicar </br> em um cartão para fazer
+                    algo, um servidor web executa um
+                    programa que aguarda uma pessoa
+                    pedir por um página da web. Não
+                    há nada de mágico ou espetacular
+                    nisso. Um desenvolvedor de
+                    software grava um programa,
+                    copia-o para um servidor que
+                    o executa continuamente.</p>
+            
+                <div class="setOfCards">
+                    <div class="card" data-card-color="club" data-card-index="A">
+                        <div class="card-pip">♣</div>
+                    </div>
+                    <div class="card" data-card-color="spade" data-card-index="A">
+                        <div class="card-pip">♠</div>
+                    </div>
+                    <div class="card" data-card-color="heart" data-card-index="A">
+                        <div class="card-pip">♥</div>
+                    </div>
+                    <div class="card" data-card-color="diamond" data-card-index="A">
+                        <div class="card-pip">♦</div>
+                    </div>
+                    <div class="card" data-card-color="diamond" data-card-index="10">
+                        <div class="card-pip">♦ ♦<br>♦<br>♦ ♦<br>♦ ♦<br>♦<br>♦ ♦</div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- O que é uma API? -->
+        <section id="intro1">
+            <h3>O que é uma API?</h3>
+            <p>Você pode olhar para um formulário em um site e saber que a caixinha com a 
+                frase "Nome" significa que você deve digitar a palavra que você usa para se 
+                identificar informalmente. No entanto, o que acontece quando você enfrenta 
+                uma tarefa muito demorada, como copiar as informações de contato de mil clientes 
+                de um site para outro? Você adoraria delegar esse trabalho a um computador para 
+                que ele possa ser feito com rapidez e precisão. Infelizmente, as características que 
+                tornam os sites ideais para o uso dos seres humanos, dificultam o uso para os 
+                computadores. A solução é uma <a class="tooltip" data-tooltip="API que em português quer dizer: Interface de Programação de Aplicações. É uma interface, ou seja, um conjunto de padrões de programação que permite ao usuário interagir com o computador através de aplicações. Ela roda por trás de tudo: enquanto você usufrui de um aplicativo ou site, a sua API está conectada a outros sistemas. Tudo isso acontece sem que você perceba. A API irá interligar diversas funções em um site (por exemplo, busca de imagens, notícias, artigos, etc.)"><strong>API (Application Programming Interface)</strong></a>, 
+                a ferramenta que faz os dados de um site digerível para um computador. 
+                Através dela, um computador pode ver e editar dados, assim como uma pessoa
+                pode carregar páginas e enviar formulários.</p>
+        </section>
+
+        <!-- Como uma API é usada? -->
+        <section id="intro2">
+            <h3>Como uma API é usada?</h3>
+            <div class="uso-api">
+                <p>Quando dois <span class="yellow-bold">sistemas (sites, desktops, smartphones)</span> se conectam a uma API, dizemos que eles são <a class="tooltip" data-tooltip="Um ótimo exemplo é um aplicativo de smartphone que sincroniza com um site. Quando você aperta o botão atualizar, ele fala com um servidor por meio de uma API e busca (fetches) as informações mais recentes. O mesmo princípio se aplica aos sites que estão integrados. Quando um site puxa dados (data) do outro, o site que fornece os dados está agindo como o servidor e o site que busca os dados é o cliente."><strong>integrados (integrated)</strong></a>. Em uma integração, você tem dois lados, cada um com um nome especial. Um lado nós já falamos sobre: o servidor. O outro lado é o <span class="yellow-bold">cliente (client)</span>. Este conhece quais dados estão disponíveis por meio da API e pode manipulá-los, geralmente através de uma <span class="yellow-bold">solicitação (request)</span> do usuário.</p>
+                <img>
+            </div>
+        </section>
+
+        <!-- Quizz -->
+        <section id="intro3">
+            <h3>Quizz</h3>
+            <!-- colocar um form -->
+            <div class="black-box">
+            <form id="quizz">
+                <label>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quae laboriosam vitae?</label>
+                <div class="option-black-box">
+                <div><input type="radio" name="quizz" value="a"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
+                <div><input type="radio" name="quizz" value="b"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
+                <div><input type="radio" name="quizz" value="c"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
+                <button id="submit">Próxima</button>
+                <div id="results"></div>
+            </div>
+        </section>
+
+        <!-- Protocolo -->
+        <section>
+            <h2><span>*</span>Protocolo</h2>
+            <p>Um protocolo de computador é um conjunto aceito de regras que governam como dois computadores podem falar um com o outro. Comparado ao nosso padrões, no entanto, um protocolo de computador é extremamente rígido. Pense por um momento das duas frases "Minha cor favorita é azul" e "Azul é minha cor favorita." As pessoas são capazes de quebrar cada frase e ver que eles significam a mesma coisa, apesar das palavras estarem em diferentes ordens. Infelizmente, os computadores não são tão inteligentes. Para dois computadores se comunicarem efetivamente, o servidor precisa saber exatamente como o cliente organizará suas mensagens. Você pode pensar nisso como um pessoa pedindo um <a class="tooltip" data-tooltip="Quando você pede a localização de um lugar, você assume que primeira coisa que lhe é dito, é o endereço da rua, seguido pela cidade, o estado e, por último, o código postal. Você também tem certas expectativas sobre cada parte do endereço, como o fato de que o código postal deve consistir apenas em números. Um nível semelhante de especificidade é necessária para que um protocolo de computador funcione."><strong>endereço de correspondência</strong></a>.</p>
+            <img>
+        </section>
+
+        <!-- O protocolo da Web -->
+        <section id="proto1">
+            <h3>O protocolo da Web</h3>
+            <p>Existe um protocolo para praticamente tudo; cada um adaptado para fazer trabalhos diferentes. Você já deve ter ouvido falar de alguns: <span class="yellow-bold">Bluetooth</span> para dispositivos de conexão e <span class="yellow-bold">POP ou IMAP</span> para buscar e-mails. Na web, o protocolo principal é o <span class="yellow-bold">Protocolo de Transferência de Hipertexto, mais conhecido por sua sigla, HTTP (Hyper-Text Transfer Protocol)</span>. Quando você digita um endereço como <span class="yellow-bold">http://exemplo.com</span> em um navegador da web, o <span class="yellow-bold">"http"</span> informa ao navegador para que ele use as regras do <span class="yellow-bold">HTTP</span> ao falar com o servidor. 
+            Com a onipresença do HTTP na web, muitas empresas optam por adotá-lo como o protocolo subjacente às suas APIs. Um benefício de usar um protocolo familiar é que diminui a curva de aprendizado para os desenvolvedores, que incentiva o uso da API. Outro benefício é que o HTTP tem vários recursos úteis na criação de uma boa API, como veremos mais adiante. Certo, agora, vamos enfrentar a água e dar uma olhada em como o HTTP funciona!</p>
+        </section>
+
+        <!-- Solicitação HTTP -->
+        <section id="proto2">
+            <h3>Solicitação HTTP</h3>
+            <p>A comunicação em HTTP é centrada em torno de um conceito chamado 
+            <span class="yellow-bold">Ciclo de Solicitação-Resposta</span>. O cliente envia ao servidor uma solicitação para fazer alguma coisa. O servidor, por sua vez, envia ao cliente uma resposta dizendo se o servidor, pode ou não, fazer o que o cliente está pedindo.</p>
+            <p>Para fazer uma solicitação válida, o cliente precisa incluir quatro coisas:<br/>
+            1 <a class="tooltip" data-tooltip="URLs são familiares para nós através do nosso uso diário da web, mas você já levou um momento para considerar sua estrutura? Em HTTP, uma URL é um endereço único para uma coisa (um substantivo). Quais as coisas que recebem os endereços é inteiramente relativo ao negócio executado pelo servidor. Eles podem criar URLs para páginas da web, imagens ou até mesmo vídeos de animais fofos. As APIs estendem essa ideia um pouco mais para incluir substantivos como clientes, produtos e tweets. Ao fazê-lo, as URLs tornam-se um caminho fácil para o cliente para informar ao servidor com qual coisa ele deseja interagir. Claro, as APIs também não as chamam de 'coisas', mas fornecem o nome técnico de recursos (resources)."><strong>URL (Localizador Uniforme de Recursos - Uniform Resource Locator)</strong></a> <br/>
+            2 <a class="tooltip" data-tooltip="O método de solicitação informa ao servidor que tipo de ação o cliente deseja que o servidor execute. Na verdade, o método é comumente referido como um solicitação (request) como um 'verbo'. Os quatro métodos mais comumente vistos em APIs são: GET, POST, PUT E DELETE."><strong>Método (method)</strong></a> <br/>
+            3 Lista de <a class="tooltip" data-tooltip="Cabeçalhos (headers) fornecem meta-informações sobre uma solicitação. Eles são uma lista simples de itens, como o horário em que o cliente enviou a solicitação e o tamanho do corpo (body) da solicitação. Você já visitou um site em seu smartphone que foi especialmente formatado para dispositivos móveis? Isso é possível graças a um cabeçalho HTTP chamado 'User-Agent'. O cliente (client) usa esse cabeçalho para informar ao servidor (server) que tipo de dispositivo você está usando e sites inteligentes o suficiente para detectá-lo podem enviar o melhor formato para o seu dispositivo. Existem alguns cabeçalhos HTTP com os quais os clientes e servidores lidam, então vamos esperar para falar sobre outros até que sejam relevantes nos próximos capítulos."><strong>Cabeçalhos (headers)</strong></a> <br/>
+            4 <a class="tooltip" data-tooltip="O corpo (body) da solicitação contém os dados (data) que o cliente deseja enviar ao servidor. Uma característica única sobre o corpo é que o cliente tem controle total sobre essa parte da solicitação. Ao contrário do método, URL ou cabeçalhos, em que o protocolo HTTP requer uma estrutura rígida, o corpo permite que o cliente envie qualquer coisa de que precise. Essas quatro partes - URL, método, cabeçalhos e corpo - formam uma solicitação HTTP completa."><strong>Corpo (body)</strong></a> <br/>
+            Isso pode soar como um monte de detalhes apenas para passar uma mensagem, 
+            mas lembre-se, os computadores têm que ser muito específicos para se comunicar com um outro.</p>
+            <div>
+                <img>
+                <div>
+                    
+                </div>
+                <img>
+            </div>
+        </section>
+
+        <!-- Resposta HTTP -->
+        <section id="proto3">
+            <h3>Resposta HTTP</h3>
+            <p>Depois que o servidor recebe uma solicitação do cliente, ele tenta atender o pedido e enviar ao cliente uma <span class="yellow-bold">resposta (response)</span>. Respostas HTTP têm uma estrutura muito semelhante às solicitações. A principal diferença é que, em vez de um método e uma URL, a resposta inclui um <a class="tooltip" data-tooltip="Os códigos de status são números de três dígitos, cada um com um significado único. Quando usado corretamente em uma API, esse pequeno número pode comunicar muitas informações ao cliente. durante as suas viagens pela Internet, você já deve ter se deparado com o código de status 404 NOT FOUND, que significa 'Não encontrado'. Sempre que o cliente faz uma solicitação para um recurso que não existe, o servidor responde com um código de status 404 para informar ao cliente: 'esse recurso não existe, então, por favor, não peça novamente!' Há uma enorme quantidade de outros status no protocolo HTTP, incluindo 200 ('sucesso! Esse pedido foi bom') para 503 ('nosso site / API está inativo no momento.') Aprenderemos mais alguns deles à medida que forem surgindo. em capítulos posteriores. Depois que uma resposta é entregue ao cliente, o ciclo de Solicitação-Resposta é concluído e essa rodada de comunicação termina. Cabe agora ao cliente iniciar quaisquer outras interações. O servidor não enviará mais dados ao cliente até receber uma nova solicitação."><strong>código de status (status code)</strong></a>. Além disso, os cabeçalhos de resposta e o corpo seguem o mesmo formato das solicitações.</p>
+            <p></p>
+        </section>
+
+        <!-- Como as APIs são construídas com HTTP -->
+        <section id="proto4">
+            <h3>Como as APIs são construídas?</h3>
+            <p>Até agora, você pode ver que o HTTP suporta uma ampla gama de permutações para ajudar o cliente e o servidor a falar. Então, como isso nos ajuda com APIs? 
+            A flexibilidade do HTTP significa que as APIs construídas nele podem fornecer aos clientes um grande potencial de negócios. Um simples ajuste no método de solicitação é a diferença entre dizer ao servidor para criar um novo pedido ou cancelar um existente. 
+            É simples transformar o resultado desejado em uma instrução que o servidor possa entender. 
+            Essa versatilidade no protocolo HTTP se estende a outras partes de uma solicitação também. Algumas APIs exigem um cabeçalho específico, enquanto outras exigem informações específicas dentro do corpo da solicitação. Ser capaz de usar APIs depende de saber como fazer a solicitação HTTP correta para obter o resultado desejado.</p>
+            <p></p>
+        </section>
+
+        <!-- Pedindo sua Pizza -->
+        <section id="proto5">
+            <h3>Pedindo sua pizza!</h3>
+            <p>Aqui está um exemplo para ajudar a ilustrar esses métodos. Digamos 
+            que há uma pizzaria com uma API que você pode usar para fazer pedidos.
+            Você faz um pedido fazendo uma solicitação <span class="yellow-bold">PUT</span> para o servidor do 
+            restaurante com os detalhes do seu pedido, solicitando que ele crie sua pizza. 
+            Assim que você enviar a solicitação, no entanto, você perceberá que escolheu a crosta de estilo errada, portanto, você faz uma solicitação <span class="yellow-bold">PUT</span> para alterá-la. Enquanto aguarda o seu pedido, você faz um monte de solicitações <span class="yellow-bold">GET</span> para verificar o status. Após uma hora de espera, você decide que já teve o suficiente e faz uma solicitação <span class="yellow-bold">DELETE</span> para cancelar seu pedido. Lembrando que é no <span class="yellow-bold">corpo (body)</span> onde os detalhes do pedido vão. </p>
+            <p></p>
+            <div>
+                <div class="yellow-box">
+                <p class="p-mono">Instruções: <br/>
+                1 Envie uma solicitação GET geralmente sem nenhum dado do corpo. <br/>
+                2 Envie uma solicitação POST e digite seu tipo favorito de pizza no campo do corpo. <br/>
+                3 Envie uma solicitação PUT e digite um novo ingrediente para adicionar ao seu pizza no campo do corpo. <br/>
+                4 Envie uma solicitação DELETE sem nenhum dado do corpo.</p></div>
+                <div class="black-box">
+                    <form>
+                        <legend>URL: http://blablablabla</legend>
+                        <div>
+                            <legend>Método:</legend>
+                            <input>
+                        </div>
+                        <div>
+                            <legend>Corpo:</legend>
+                            <input>
+                        </div>
+                        <button type="submit">Envie sua solicitação</button>
+                        <div>
+                            <legend>Resposta:</legend>
+                            <input>
+                        </div>
+                    </form>
+                
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-style">
+        
+    </footer>
+    
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

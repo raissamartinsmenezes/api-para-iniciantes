@@ -1,0 +1,28 @@
+a.tooltip {
+    position: relative;
+}
+
+a.tooltip:after {
+    content: attr(data-tooltip);
+    visibility: hidden;
+    background-color: $lilac-lighten;
+    color: black;
+    font-size: 0.8rem;
+    padding: 1%;
+    font-family: "Roboto";
+    position: absolute;
+    left: 100%;
+    z-index: 999;
+    width: 130%;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+a.tooltip:hover:after {
+    visibility: visible;
+}
+
+a.tooltip:hover:after,
+a.tooltip:hover:before {
+    opacity: 1;
+}

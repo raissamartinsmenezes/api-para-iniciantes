@@ -4,12 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: url(../assets/img/background.jpg);
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: contain;
   font-size: 100%;
   /* opacity: 0.5; */
   /* resolver problema com a opacidade */
@@ -35,6 +36,10 @@ h3 {
   text-align: left;
 }
 
+section {
+  margin: 3% 3%;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -53,7 +58,9 @@ li {
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  line-height: 150%;
 }
+
 .p-robo-light {
   font-weight: 300;
 }
@@ -68,6 +75,7 @@ p {
 
 .p-mono {
   font-family: "Roboto Mono", monospace;
+  font-weight: 500;
 
   .p-mono-bold {
     font-weight: 700;
@@ -84,7 +92,16 @@ p {
 }
 
 strong {
-    background-color: $lilac-lighten;
+  background-color: $lilac-lighten;
+}
+
+.yellow-bold {
+  background-color: $yellow-lighten;
+  font-weight: bold;
+}
+
+label {
+  font-family: "Roboto Mono", monospace;
 }
 
 .container {

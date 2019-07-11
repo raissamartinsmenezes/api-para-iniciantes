@@ -1,12 +1,12 @@
 .yellow-box {
     width: 50vw;
-    margin: 0 auto;
+    margin: 3% auto;
     background-color: $yellow-lighten;
     @include flex(center, center); 
 
     p {
         font-size: $box-font;
-        padding: 0 4%;
+        padding: 4%;
     }
     
 }

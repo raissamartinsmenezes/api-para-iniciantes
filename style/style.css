@@ -5,12 +5,13 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: url(../assets/img/background.jpg);
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: contain;
   font-size: 100%;
   /* opacity: 0.5; */
   /* resolver problema com a opacidade */
@@ -36,6 +37,10 @@ h3 {
   text-align: left;
 }
 
+section {
+  margin: 3% 3%;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -54,6 +59,7 @@ li {
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  line-height: 150%;
 }
 
 .p-robo-light {
@@ -70,6 +76,7 @@ p {
 
 .p-mono {
   font-family: "Roboto Mono", monospace;
+  font-weight: 500;
 }
 
 .p-mono .p-mono-bold {
@@ -87,6 +94,15 @@ p {
 
 strong {
   background-color: #ECDAFF;
+}
+
+.yellow-bold {
+  background-color: #FFF3B5;
+  font-weight: bold;
+}
+
+label {
+  font-family: "Roboto Mono", monospace;
 }
 
 .container {
@@ -289,7 +305,7 @@ strong {
 
 .yellow-box {
   width: 50vw;
-  margin: 0 auto;
+  margin: 3% auto;
   background-color: #FFF3B5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,15 +320,75 @@ strong {
 
 .yellow-box p {
   font-size: 0.85rem;
-  padding: 0 4%;
+  padding: 4%;
 }
 
 .black-box {
-  width: 35vw;
+  width: 40vw;
   height: 50vh;
-  margin: 0 auto;
+  margin: 3% auto;
   background-color: black;
-  font-family: "Roboto Mono", monospace;
   font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.black-box button {
+  background-color: #ECDAFF;
+  padding: 2%;
+  border: none;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  margin-top: 4%;
+}
+
+.black-box .option-black-box {
+  padding: 2% 0;
+}
+
+.black-box .option-black-box div {
+  margin-top: 2%;
+}
+
+.black-box .option-black-box label {
+  margin-left: 1%;
+}
+
+form {
+  padding: 5%;
+}
+
+a.tooltip {
+  position: relative;
+}
+
+a.tooltip:after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  background-color: #ECDAFF;
+  color: black;
+  font-size: 0.8rem;
+  padding: 1%;
+  font-family: "Roboto";
+  position: absolute;
+  left: 100%;
+  z-index: 999;
+  width: 130%;
+  opacity: 0;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+a.tooltip:hover:after {
+  visibility: visible;
+}
+
+a.tooltip:hover:after,
+a.tooltip:hover:before {
+  opacity: 1;
+}
+
+.footer-style {
+  background-color: #ECDAFF;
+  height: 15vh;
 }
 /*# sourceMappingURL=style.css.map */

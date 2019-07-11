@@ -1,8 +1,35 @@
 .black-box {
-    width: 35vw;
+    width: 40vw;
     height: 50vh;
-    margin: 0 auto;
+    margin: 3% auto;
     background-color: black;
-    font-family: "Roboto Mono", monospace;
+    // font-family: "Roboto Mono", monospace;
     font-size: $box-font; 
+    color: #ffffff;
+
+    button {
+        @include button($lilac-lighten);
+        margin-top: 4%;
+    }
+
+    .option-black-box {
+        padding: 2% 0;
+
+        div {
+            margin-top: 2%;
+        }
+
+        label {
+            margin-left: 1%;
+        }
+    }
+
 }
+
+form {
+    padding: 5%;
+}
+
+// .option-black-box {
+//     @include flex(center, center);
+// }
