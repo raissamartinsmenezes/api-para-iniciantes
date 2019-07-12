@@ -1,4 +1,21 @@
 .footer-style {
     background-color: $lilac-lighten;
-    height: 15vh;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+        width: 15%;
+        // margin-bottom: -17%;
+        // height: 100%;
+    }
+
+    // p {
+    //     margin: 2% 0;
+    // }
 }

@@ -1,0 +1,17 @@
+.to-top {
+    width: 7%;
+    padding: 1%;
+    background: #000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    a {
+        font-size: 0.95rem;
+        color: #fff;
+        font-family: "Roboto Mono", monospace;
+        font-weight: 400;
+    }
+
+}

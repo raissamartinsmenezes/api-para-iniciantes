@@ -44,7 +44,7 @@ section {
 a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -130,9 +130,41 @@ label {
   width: 70%;
 }
 
-img {
-  width: 45%;
-  margin: 0 auto;
+.div-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2% auto;
+}
+
+.div-img .img-api {
+  width: 50%;
+}
+
+.div-img .img-sol {
+  width: 50%;
+}
+
+.div-img .img-intro {
+  width: 40%;
+}
+
+.div-img .img-answer {
+  width: 40%;
+}
+
+.div-img .img-404 {
+  width: 30%;
+}
+
+.nav-back {
+  background-color: #FFF3B5;
+  padding: 2% 0;
 }
 
 .nav-section {
@@ -142,6 +174,7 @@ img {
 .nav {
   width: 80%;
   margin: 0 auto;
+  padding: 0.8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,10 +472,28 @@ a.tooltip:hover:before {
 
 .footer-style {
   background-color: #ECDAFF;
-  height: 15vh;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer img {
+  width: 15%;
 }
 
 .shape .envelope {
+  margin-left: 15%;
   position: relative;
   background: #AC7FDB;
   width: 6.0707rem;
@@ -519,5 +570,22 @@ a.tooltip:hover:before {
   top: -2.257rem;
   -webkit-transition: 0.5s top;
   transition: 0.5s top;
+}
+
+.to-top {
+  width: 7%;
+  padding: 1%;
+  background: #000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.to-top a {
+  font-size: 0.95rem;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */

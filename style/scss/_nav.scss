@@ -1,3 +1,8 @@
+.nav-back {
+    background-color: $yellow-lighten;
+    padding: 2% 0;
+}
+
 .nav-section {
     text-align: center;
 }
@@ -5,6 +10,7 @@
 .nav {
     width: 80%;
     margin: 0 auto;
+    padding: 0.8%;
     @include flex(flex-start, space-between); 
     font-size: 1.5rem;
 

@@ -43,7 +43,7 @@ section {
 a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
 
   &:hover {
@@ -102,6 +102,16 @@ strong {
   font-weight: bold;
 }
 
+// .lilac-bold {
+//   background-color: $lilac-darken;
+//   a {
+//     &:hover {
+//       color: black;
+//       font-weight: 700;
+//     }
+//   }
+// }
+
 label {
   font-family: "Roboto Mono", monospace;
 }
@@ -123,7 +133,29 @@ label {
   width: 70%;
 }
 
-img {
-  width: 45%;
-  margin: 0 auto;
+.div-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2% auto;
+  
+  .img-api {
+    width: 50%;
+  }
+
+  .img-sol {
+    width: 50%;
+  }
+
+  .img-intro {
+    width: 40%;
+  }
+
+  .img-answer {
+    width: 40%;
+  }
+
+  .img-404 {
+    width: 30%;
+  }
 }
