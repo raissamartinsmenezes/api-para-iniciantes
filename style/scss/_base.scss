@@ -114,3 +114,16 @@ label {
   /* position: absolute;
     z-index: 99; */
 }
+
+.display-flex {
+  @include flex(center, space-around); 
+}
+
+.div-width {
+  width: 70%;
+}
+
+img {
+  width: 45%;
+  margin: 0 auto;
+}

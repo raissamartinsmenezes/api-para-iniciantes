@@ -44,11 +44,7 @@
         <section class="intro-section">
             <h2><span>*</span>Introdução</h2>
             <p>Para nos ancorar, vamos começar com algo que é físico: o <a href="#" class="tooltip" data-tooltip="A realidade é que as pessoas de TI se conectam remotamente a eles. Servidores são usados para todos os tipos de coisas. Alguns armazenam dados, outros enviam emails. O tipo que as pessoas mais interagem são os servidores da web (web servers). Estes são os servidores que fornecem uma página da web quando você visita um site."><strong>servidor (the server)</strong></a>. Um servidor nada mais é do que um grande computador, tem todas as mesmas partes que um laptop desktop que você usa para o trabalho, é apenas mais rápido e mais poderoso. Normalmente, os servidores não têm um monitor, teclado ou mouse, o que os torna inacessíveis.</p>
-            <div>
-                <img>
-                <span>x</span>
-                <img>
-            </div>
+            <img src="./assets/img/intro.png">
             <div class="yellow-box">
                 <p class="p-mono">Da mesma forma que um programa
                     como a Paciência espera por você
@@ -104,7 +100,7 @@
             <h3>Como uma API é usada?</h3>
             <div class="uso-api">
                 <p>Quando dois <span class="yellow-bold">sistemas (sites, desktops, smartphones)</span> se conectam a uma API, dizemos que eles são <a class="tooltip" data-tooltip="Um ótimo exemplo é um aplicativo de smartphone que sincroniza com um site. Quando você aperta o botão atualizar, ele fala com um servidor por meio de uma API e busca (fetches) as informações mais recentes. O mesmo princípio se aplica aos sites que estão integrados. Quando um site puxa dados (data) do outro, o site que fornece os dados está agindo como o servidor e o site que busca os dados é o cliente."><strong>integrados (integrated)</strong></a>. Em uma integração, você tem dois lados, cada um com um nome especial. Um lado nós já falamos sobre: o servidor. O outro lado é o <span class="yellow-bold">cliente (client)</span>. Este conhece quais dados estão disponíveis por meio da API e pode manipulá-los, geralmente através de uma <span class="yellow-bold">solicitação (request)</span> do usuário.</p>
-                <img>
+                <img src="assets/img/api.png">
             </div>
         </section>
 
@@ -128,8 +124,23 @@
         <!-- Protocolo -->
         <section>
             <h2><span>*</span>Protocolo</h2>
-            <p>Um protocolo de computador é um conjunto aceito de regras que governam como dois computadores podem falar um com o outro. Comparado ao nosso padrões, no entanto, um protocolo de computador é extremamente rígido. Pense por um momento das duas frases "Minha cor favorita é azul" e "Azul é minha cor favorita." As pessoas são capazes de quebrar cada frase e ver que eles significam a mesma coisa, apesar das palavras estarem em diferentes ordens. Infelizmente, os computadores não são tão inteligentes. Para dois computadores se comunicarem efetivamente, o servidor precisa saber exatamente como o cliente organizará suas mensagens. Você pode pensar nisso como um pessoa pedindo um <a class="tooltip" data-tooltip="Quando você pede a localização de um lugar, você assume que primeira coisa que lhe é dito, é o endereço da rua, seguido pela cidade, o estado e, por último, o código postal. Você também tem certas expectativas sobre cada parte do endereço, como o fato de que o código postal deve consistir apenas em números. Um nível semelhante de especificidade é necessária para que um protocolo de computador funcione."><strong>endereço de correspondência</strong></a>.</p>
-            <img>
+            <div class="display-flex">
+                <p>Um protocolo de computador é um conjunto aceito de regras que governam como dois computadores podem falar um com
+                    o outro. Comparado ao nosso padrões, no entanto, um protocolo de computador é extremamente rígido. Pense por um
+                    momento das duas frases "Minha cor favorita é azul" e "Azul é minha cor favorita." As pessoas são capazes de
+                    quebrar cada frase e ver que eles significam a mesma coisa, apesar das palavras estarem em diferentes ordens.
+                    Infelizmente, os computadores não são tão inteligentes. Para dois computadores se comunicarem efetivamente, o
+                    servidor precisa saber exatamente como o cliente organizará suas mensagens. Você pode pensar nisso como um
+                    pessoa pedindo um <a class="tooltip"
+                        data-tooltip="Quando você pede a localização de um lugar, você assume que primeira coisa que lhe é dito, é o endereço da rua, seguido pela cidade, o estado e, por último, o código postal. Você também tem certas expectativas sobre cada parte do endereço, como o fato de que o código postal deve consistir apenas em números. Um nível semelhante de especificidade é necessária para que um protocolo de computador funcione."><strong>endereço
+                            de correspondência</strong></a>.</p>
+                <div class="shape">
+                    <div class="envelope">
+                        <section class="paper"></section>
+                    </div>
+                    <!-- <div><span >Passe o mouse!</span></div> -->
+                </div>
+            </div>
         </section>
 
         <!-- O protocolo da Web -->
@@ -152,11 +163,7 @@
             Isso pode soar como um monte de detalhes apenas para passar uma mensagem, 
             mas lembre-se, os computadores têm que ser muito específicos para se comunicar com um outro.</p>
             <div>
-                <img>
-                <div>
-                    
-                </div>
-                <img>
+                <img src="./assets/img/solicitacao.png">
             </div>
         </section>
 
@@ -164,7 +171,9 @@
         <section id="proto3">
             <h3>Resposta HTTP</h3>
             <p>Depois que o servidor recebe uma solicitação do cliente, ele tenta atender o pedido e enviar ao cliente uma <span class="yellow-bold">resposta (response)</span>. Respostas HTTP têm uma estrutura muito semelhante às solicitações. A principal diferença é que, em vez de um método e uma URL, a resposta inclui um <a class="tooltip" data-tooltip="Os códigos de status são números de três dígitos, cada um com um significado único. Quando usado corretamente em uma API, esse pequeno número pode comunicar muitas informações ao cliente. durante as suas viagens pela Internet, você já deve ter se deparado com o código de status 404 NOT FOUND, que significa 'Não encontrado'. Sempre que o cliente faz uma solicitação para um recurso que não existe, o servidor responde com um código de status 404 para informar ao cliente: 'esse recurso não existe, então, por favor, não peça novamente!' Há uma enorme quantidade de outros status no protocolo HTTP, incluindo 200 ('sucesso! Esse pedido foi bom') para 503 ('nosso site / API está inativo no momento.') Aprenderemos mais alguns deles à medida que forem surgindo. em capítulos posteriores. Depois que uma resposta é entregue ao cliente, o ciclo de Solicitação-Resposta é concluído e essa rodada de comunicação termina. Cabe agora ao cliente iniciar quaisquer outras interações. O servidor não enviará mais dados ao cliente até receber uma nova solicitação."><strong>código de status (status code)</strong></a>. Além disso, os cabeçalhos de resposta e o corpo seguem o mesmo formato das solicitações.</p>
-            <p></p>
+            <div>
+                <img src="./assets/img/resposta.png">
+            </div>
         </section>
 
         <!-- Como as APIs são construídas com HTTP -->
