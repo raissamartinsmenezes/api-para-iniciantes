@@ -114,17 +114,46 @@
         <section id="intro3">
             <h3>Quizz</h3>
             <!-- colocar um form -->
-            <div class="black-box">
-            <form id="quizz">
-                <label>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quae laboriosam vitae?</label>
-                <div class="option-black-box">
-                <div><input type="radio" name="quizz" value="a"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
-                <div><input type="radio" name="quizz" value="b"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
-                <div><input type="radio" name="quizz" value="c"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores minus optio pariatur?</label> <br/></div>
-                <button id="submit">Próxima</button>
-                <div id="results"></div>
-            </form>
+            <div id="boxQuestions" class="black-box">
+                <div class="d-flex">
+                    <div class="question-box margin-right w-box-quizz">
+                        <label>O que é um servidor?</label>
+                            <div id="questions "class="option-black-box"> 
+                                <div><input type="radio" name="question" value="a"><label>Um computador com mouse, teclado e monitor.</label> <br/></div>
+                                <div><input type="radio" name="question" value="b"><label>Um computado sem mouse, teclado e monitor.</label> <br/></div>
+                                <div><input type="radio" name="question" value="c"><label>Não é um computador, pois não tem as mesmas funções.</label> <br/></div>
+                            </div>
+                    </div>
+                    <div class="question-box margin-right">
+                        <label>Qual o significado de API?</label>
+                        <div id="questions "class="option-black-box"> 
+                            <div><input type="radio" name="question1" value="d"><label>Interface de programação de aplicativos.</label> <br/></div>
+                            <div><input type="radio" name="question1" value="e"><label>Interface de programação de aplicação.</label> <br/></div>
+                            <div><input type="radio" name="question1" value="f"><label>Implementação de aplicativos programáveis.</label> <br/></div>
+                        </div>
+                    </div>
+                    <div class="question-box margin-top">
+                        <label>Quando dois sistemas estão conectados através de uma API, dizemos que eles estão:</label>
+                            <div id="questions "class="option-black-box"> 
+                                <div><input type="radio" name="question2" value="g"><label>Integrados.</label> <br/></div>
+                                <div><input type="radio" name="question2" value="h"><label>Ampliados.</label> <br/></div>
+                                <div><input type="radio" name="question2" value="i"><label>Manipulados.</label> <br/></div>
+                            </div>
+                    </div>
+                </div>
+                    <div class="question-box">
+                        <button id="submit">ENVIAR RESPOSTAS</button>
+                        <!-- <div id="results"></div> -->
+                        <div class="div-style">
+                                <label>Resultado:</label>
+                                <div class="yellow-answer" id="resultadoQuizz">
+    
+                                </div>
+                            </div>
+                    </div>
             </div>
+            <!-- <button id="submit">Próxima</button>
+            <div id="results"></div> -->
         </section>
 
         <!-- Protocolo -->
@@ -179,7 +208,7 @@
             <p>Depois que o servidor recebe uma solicitação do cliente, ele tenta atender o pedido e enviar ao cliente uma <span class="yellow-bold">resposta (response)</span>. Respostas HTTP têm uma estrutura muito semelhante às solicitações. A principal diferença é que, em vez de um método e uma URL, a resposta inclui um <a class="tooltip" data-tooltip="Os códigos de status são números de três dígitos, cada um com um significado único. Quando usado corretamente em uma API, esse pequeno número pode comunicar muitas informações ao cliente. durante as suas viagens pela Internet, você já deve ter se deparado com o código de status 404 NOT FOUND, que significa 'Não encontrado'. Sempre que o cliente faz uma solicitação para um recurso que não existe, o servidor responde com um código de status 404 para informar ao cliente: 'esse recurso não existe, então, por favor, não peça novamente!' Há uma enorme quantidade de outros status no protocolo HTTP, incluindo 200 ('sucesso! Esse pedido foi bom') para 503 ('nosso site / API está inativo no momento.') Aprenderemos mais alguns deles à medida que forem surgindo. em capítulos posteriores. Depois que uma resposta é entregue ao cliente, o ciclo de Solicitação-Resposta é concluído e essa rodada de comunicação termina. Cabe agora ao cliente iniciar quaisquer outras interações. O servidor não enviará mais dados ao cliente até receber uma nova solicitação."><strong>código de status (status code)</strong></a>. Além disso, os cabeçalhos de resposta e o corpo seguem o mesmo formato das solicitações.</p>
             <div class="div-img">
                 <img class="img-answer" src="./assets/img/resposta.png">
-                <img class="img-404" img-404" src="./assets/img/404.png">
+                <img class="img-404" src="./assets/img/404.png">
             </div>
         </section>
 
@@ -209,7 +238,7 @@
                 2 Envie uma solicitação POST e digite seu tipo favorito de pizza no campo do corpo. <br/>
                 3 Envie uma solicitação PUT e digite um novo ingrediente para adicionar ao seu pizza no campo do corpo. <br/>
                 4 Envie uma solicitação DELETE sem nenhum dado do corpo.</p></div>
-                <div class="black-box">
+                <div class="black-box w-box-form">
                     <form>
                         <label>URL: http://exemplo.com</label>
                         <div class="div-style">
@@ -254,6 +283,9 @@
     <!-- <script src="./node_modules/jquery/dist/jquery.js"></script> -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    <!-- <script src="js/staticquizz.js"></script> -->
+    <!-- <script src="js/quizz.js"></script> -->
 </body>
 
 </html>

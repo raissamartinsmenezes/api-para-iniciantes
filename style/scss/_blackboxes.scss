@@ -1,11 +1,30 @@
+.w-box-form {
+    width: 50vw;
+    height: 60vh;
+}
+
+.w-box-quizz {
+    width: 45vw;
+    height: 28vh;
+}
+
 .black-box {
-    width: 40vw;
-    height: 50vh;
     margin: 3% auto;
     background-color: black;
     // font-family: "Roboto Mono", monospace;
     font-size: $box-font; 
     color: #ffffff;
+    padding: 3%;
+    // display: flex;
+    // flex-wrap: wrap;
+
+    .d-flex {
+        display: flex;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
 
     button {
         @include button($lilac-lighten);
@@ -20,7 +39,8 @@
         }
 
         label {
-            margin-left: 1%;
+            // margin-left: 1%;
+            font-size: 0.8rem;
         }
     }
 
@@ -38,9 +58,9 @@
 
 }
 
-form {
-    padding: 5%; 
-}
+// form {
+//     padding: 5%; 
+// }
 
 .div-style {
     margin-top: 2.5%;
@@ -55,6 +75,15 @@ form {
     select, textarea {
         margin-left: 2%;
     }
+}
+
+.question-box {
+    width: 35%;
+    // margin-left: 2%;
+}
+
+.margin-right {
+    margin-right: 2%;
 }
 
 // .option-black-box {

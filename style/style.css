@@ -377,13 +377,32 @@ label {
   padding: 4%;
 }
 
+.w-box-form {
+  width: 50vw;
+  height: 60vh;
+}
+
+.w-box-quizz {
+  width: 45vw;
+  height: 28vh;
+}
+
 .black-box {
-  width: 40vw;
-  height: 50vh;
   margin: 3% auto;
   background-color: black;
   font-size: 0.85rem;
   color: #ffffff;
+  padding: 3%;
+}
+
+.black-box .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.black-box label {
+  font-size: 0.8rem;
 }
 
 .black-box button {
@@ -405,7 +424,7 @@ label {
 }
 
 .black-box .option-black-box label {
-  margin-left: 1%;
+  font-size: 0.8rem;
 }
 
 .black-box .yellow-answer {
@@ -416,10 +435,6 @@ label {
   color: black;
   font-family: "Roboto Mono", monospace;
   padding: 4%;
-}
-
-form {
-  padding: 5%;
 }
 
 .div-style {
@@ -438,6 +453,14 @@ form {
 
 .div-style select, .div-style textarea {
   margin-left: 2%;
+}
+
+.question-box {
+  width: 35%;
+}
+
+.margin-right {
+  margin-right: 2%;
 }
 
 a.tooltip {
